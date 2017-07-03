@@ -33,7 +33,7 @@ from tackerclient.tacker import v1_0 as tackerV10
 from tackerclient.tacker import v1_0 as tackerV10
 
 _VNFBACKUP = 'vnfbackup'
-
+######## tacker freezer for COMMAND QUERY"
 class ListBackup(tackerV10.ListCommand):
     resource = _VNFBACKUP
     list_columns = ['Vnf_id','Job_id','Action']

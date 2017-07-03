@@ -169,7 +169,7 @@ COMMAND_V1 = {
     'ns-list': ns.ListNS,
     'ns-delete': ns.DeleteNS,
     'ns-show': ns.ShowNS,
-
+###create COMMAN
     'vnf-backup list': vnfbackup.ListBackup
 }
 

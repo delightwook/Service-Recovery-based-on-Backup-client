@@ -367,7 +367,7 @@ class Client(ClientBase):
 
     nss_path = '/nss'
     ns_path = '/nss/%s'
-
+####backup _path
     backup_path = '/vnfbackups'
 #  backups_path = '/vnfbackups/%s'
 
