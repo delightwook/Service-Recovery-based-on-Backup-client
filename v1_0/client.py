@@ -367,8 +367,8 @@ class Client(ClientBase):
 
     nss_path = '/nss'
     ns_path = '/nss/%s'
-####backup _path
-    backup_path = '/vnfbackups'
+####backup _path -> api name to tacker vnfm.py
+    backups_path = '/vnfbackup'
 #  backups_path = '/vnfbackups/%s'
 
     # API has no way to report plurals, so we have to hard code them
@@ -399,6 +399,8 @@ class Client(ClientBase):
                     vnfd['description'] = \
                         vnfd['description'][:DEFAULT_DESC_LENGTH]
                     vnfd['description'] += '...'
+
+
         return vnfds_dict
 
     @APIParamsCall
@@ -419,12 +421,16 @@ class Client(ClientBase):
     def list_vnfs(self, retrieve_all=True, **_params):
         vnfs = self.list('vnfs', self.vnfs_path, retrieve_all, **_params)
         for vnf in vnfs['vnfs']:
+            print("vnf",vnf)
             error_reason = vnf.get('error_reason', None)
             if error_reason and \
                 len(error_reason) > DEFAULT_ERROR_REASON_LENGTH:
                 vnf['error_reason'] = error_reason[
                     :DEFAULT_ERROR_REASON_LENGTH]
                 vnf['error_reason'] += '...'
+        print(_params.items())
+        print("\n")
+        print("###%#$%#$% vnf",vnfs)
         return vnfs
 
     @APIParamsCall
@@ -668,5 +674,6 @@ class Client(ClientBase):
 
     @APIParamsCall
     def list_vnfbackups(self,retrieve_all = True,**_params):
-        backups= self.list('vnfbackups',self.backup_path,retrieve_all,**_params)
+        backups= self.list('vnfbackup',self.backups_path,retrieve_all,**_params)
+        print("##################backups####################",backups)
         return backups
