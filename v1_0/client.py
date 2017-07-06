@@ -367,9 +367,12 @@ class Client(ClientBase):
 
     nss_path = '/nss'
     ns_path = '/nss/%s'
-####backup _path -> api name to tacker vnfm.py
-    backups_path = '/vnfbackup'
-#  backups_path = '/vnfbackups/%s'
+####disaster_path -> api name to tacker vnfm.py
+    backups_path = '/vnfbackups'
+    backup_path = '/vnfbackups/%s'
+    restores_path = '/vnfrestores'
+    restore_path = '/vnfrestores/%s'
+
 
     # API has no way to report plurals, so we have to hard code them
     # EXTED_PLURALS = {}
@@ -401,6 +404,9 @@ class Client(ClientBase):
                     vnfd['description'] += '...'
 
 
+        print("#####vnfds_dict ",vnfds_dict)
+
+
         return vnfds_dict
 
     @APIParamsCall
@@ -428,9 +434,8 @@ class Client(ClientBase):
                 vnf['error_reason'] = error_reason[
                     :DEFAULT_ERROR_REASON_LENGTH]
                 vnf['error_reason'] += '...'
-        print(_params.items())
-        print("\n")
-        print("###%#$%#$% vnf",vnfs)
+
+
         return vnfs
 
     @APIParamsCall
@@ -663,7 +668,7 @@ class Client(ClientBase):
     @APIParamsCall
     def show_ns(self, ns, **_params):
         return self.get(self.ns_path % ns, params=_params)
-
+    #
     @APIParamsCall
     def create_ns(self, body):
         return self.post(self.nss_path, body=body)
@@ -672,8 +677,9 @@ class Client(ClientBase):
     def delete_ns(self, ns):
         return self.delete(self.ns_path % ns)
 
+    ########## VNF DISASTER BACKUP & RESTORE ####################
     @APIParamsCall
-    def list_vnfbackups(self,retrieve_all = True,**_params):
-        backups= self.list('vnfbackup',self.backups_path,retrieve_all,**_params)
-        print("##################backups####################",backups)
-        return backups
+    def create_vnfbackup(self, body=None):
+        print("##################1. create vnfbackup in tackerclient ")
+        return self.post(self.backups_path, body)
+

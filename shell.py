@@ -54,7 +54,7 @@ from tackerclient.tacker.v1_0.nfvo import vnffg
 from tackerclient.tacker.v1_0.nfvo import vnffgd
 from tackerclient.tacker.v1_0.vnfm import vnf
 from tackerclient.tacker.v1_0.vnfm import vnfd
-from tackerclient.tacker.v1_0.vnfm import vnfbackup
+from tackerclient.tacker.v1_0.vnfm import vnfdisaster
 from tackerclient.version import __version__
 
 
@@ -169,10 +169,12 @@ COMMAND_V1 = {
     'ns-list': ns.ListNS,
     'ns-delete': ns.DeleteNS,
     'ns-show': ns.ShowNS,
-###create COMMAN
-    'vnf-backup list': vnfbackup.ListBackup
-}
 
+     ### vnf Backup Restore create command
+    'vnf-backup create': vnfdisaster.CreateBackup
+#   'vnf-backup list': vnfdisaster.ListBackup
+
+}
 COMMANDS = {'1.0': COMMAND_V1}
 
 
