@@ -32,9 +32,6 @@ class CreateBackup(tackerV10.CreateCommand):
             help='Set a nova instacne id for the VNF')
         # name + backup-name
         parser.add_argument(
-            '--backup-name',
-            help='Set a name for the VNF')
-        parser.add_argument(
             '--container',
             help='Set a name for backup container in swift')
         parser.add_argument(
@@ -62,7 +59,7 @@ class CreateBackup(tackerV10.CreateCommand):
 
 
         tackerV10.update_dict(parsed_args, body[self.resource],
-                              ['id', 'name', 'tenant_id','action','nova_instance_id','backup_name',
+                              ['id', 'name', 'tenant_id','action','nova_instance_id',
                                'container', 'storage','start_time','end_time','interval'])
 
         return body

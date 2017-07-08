@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b677bed-6fbd-42f3-8593-3cda504c00ce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tacker/v1_0/vnfm/vnfdisaster.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tacker/v1_0/vnfm/vnfbackup.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tacker/v1_0/vnfm/vnfdisaster.py" afterPath="$PROJECT_DIR$/tacker/v1_0/vnfm/vnfrecovery.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shell.py" afterPath="$PROJECT_DIR$/shell.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/v1_0/client.py" afterPath="$PROJECT_DIR$/v1_0/client.py" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="client.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v1_0/client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12806">
-              <caret line="685" column="0" lean-forward="false" selection-start-line="685" selection-start-column="0" selection-end-line="685" selection-end-column="0" />
+            <state relative-caret-position="756">
+              <caret line="681" column="42" lean-forward="false" selection-start-line="681" selection-start-column="42" selection-end-line="681" selection-end-column="42" />
               <folding>
                 <element signature="e#697#711#0" expanded="true" />
               </folding>
@@ -48,34 +47,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vnfdisaster.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnfdisaster.py">
+      <file leaf-file-name="vnfrecovery.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnfrecovery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+            <state relative-caret-position="703">
+              <caret line="61" column="85" lean-forward="false" selection-start-line="61" selection-start-column="85" selection-end-line="61" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shell.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shell.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3059">
-              <caret line="198" column="8" lean-forward="false" selection-start-line="198" selection-start-column="8" selection-end-line="198" selection-end-column="8" />
+            <state relative-caret-position="357">
+              <caret line="173" column="28" lean-forward="false" selection-start-line="173" selection-start-column="28" selection-end-line="173" selection-end-column="36" />
               <folding>
                 <element signature="e#689#726#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vnf.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5415">
-              <caret line="288" column="0" lean-forward="false" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -103,8 +92,9 @@
         <option value="$PROJECT_DIR$/tacker/v1_0/nfvo/vnfbackup.py" />
         <option value="$PROJECT_DIR$/tacker/v1_0/vnfm/vnfbackup.py" />
         <option value="$PROJECT_DIR$/shell.py" />
-        <option value="$PROJECT_DIR$/v1_0/client.py" />
         <option value="$PROJECT_DIR$/tacker/v1_0/vnfm/vnfdisaster.py" />
+        <option value="$PROJECT_DIR$/v1_0/client.py" />
+        <option value="$PROJECT_DIR$/tacker/v1_0/vnfm/vnfrecovery.py" />
       </list>
     </option>
   </component>
@@ -135,6 +125,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -275,8 +267,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,7 +312,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tackerclient" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tacker/v1_0/vnfm/vnfdisaster.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tacker/v1_0/vnfm/vnfrecovery.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -612,6 +602,78 @@
     <entry file="file://$PROJECT_DIR$/v1_0/client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12806">
+          <caret line="685" column="0" lean-forward="false" selection-start-line="685" selection-start-column="0" selection-end-line="685" selection-end-column="0" />
+          <folding>
+            <element signature="e#697#711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnfrecovery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3059">
+          <caret line="198" column="8" lean-forward="false" selection-start-line="198" selection-start-column="8" selection-end-line="198" selection-end-column="8" />
+          <folding>
+            <element signature="e#689#726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5415">
+          <caret line="288" column="0" lean-forward="false" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_0/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12806">
+          <caret line="685" column="0" lean-forward="false" selection-start-line="685" selection-start-column="0" selection-end-line="685" selection-end-column="0" />
+          <folding>
+            <element signature="e#697#711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnfrecovery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3059">
+          <caret line="198" column="8" lean-forward="false" selection-start-line="198" selection-start-column="8" selection-end-line="198" selection-end-column="8" />
+          <folding>
+            <element signature="e#689#726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5415">
+          <caret line="288" column="0" lean-forward="false" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_0/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12806">
           <caret line="685" column="0" lean-forward="true" selection-start-line="685" selection-start-column="0" selection-end-line="685" selection-end-column="0" />
           <folding>
             <element signature="e#697#711#0" expanded="true" />
@@ -619,7 +681,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnfdisaster.py">
+    <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnfrecovery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -805,37 +867,37 @@
     <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnfbackup.py" />
     <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5415">
+        <state relative-caret-position="1573">
           <caret line="288" column="0" lean-forward="false" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3059">
-          <caret line="198" column="8" lean-forward="false" selection-start-line="198" selection-start-column="8" selection-end-line="198" selection-end-column="8" />
-          <folding>
-            <element signature="e#689#726#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/v1_0/client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12806">
-          <caret line="685" column="0" lean-forward="false" selection-start-line="685" selection-start-column="0" selection-end-line="685" selection-end-column="0" />
+        <state relative-caret-position="756">
+          <caret line="681" column="42" lean-forward="false" selection-start-line="681" selection-start-column="42" selection-end-line="681" selection-end-column="42" />
           <folding>
             <element signature="e#697#711#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnfdisaster.py">
+    <entry file="file://$PROJECT_DIR$/tacker/v1_0/vnfm/vnfrecovery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+        <state relative-caret-position="703">
+          <caret line="61" column="85" lean-forward="false" selection-start-line="61" selection-start-column="85" selection-end-line="61" selection-end-column="85" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="173" column="28" lean-forward="false" selection-start-line="173" selection-start-column="28" selection-end-line="173" selection-end-column="36" />
+          <folding>
+            <element signature="e#689#726#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

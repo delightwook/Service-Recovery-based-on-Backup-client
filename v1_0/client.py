@@ -680,6 +680,5 @@ class Client(ClientBase):
     ########## VNF DISASTER BACKUP & RESTORE ####################
     @APIParamsCall
     def create_vnfbackup(self, body=None):
-        print("##################1. create vnfbackup in tackerclient ")
         return self.post(self.backups_path, body)
 
