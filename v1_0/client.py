@@ -682,3 +682,7 @@ class Client(ClientBase):
     def create_vnfbackup(self, body=None):
         return self.post(self.backups_path, body)
 
+    @APIParamsCall
+    def create_vnfrestore(self, body=None):
+        return self.post(self.restores_path, body)
+

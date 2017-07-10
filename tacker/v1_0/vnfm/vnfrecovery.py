@@ -47,9 +47,50 @@ class CreateBackup(tackerV10.CreateCommand):
             '--interval',
             help='Set a interval for backup')
 
+    def args2body(self, parsed_args):
+        body = {self.resource: {}}
+        tacker_client = self.get_client()
+        tacker_client.format = parsed_args.request_format
+
+
+        tackerV10.update_dict(parsed_args, body[self.resource],
+                              ['id', 'name', 'tenant_id','action','nova_instance_id',
+                               'container', 'storage','start_time','end_time','interval','job_id'])
+
+        return body
 
 
 
+
+
+
+
+
+class CreateRestore(tackerV10.CreateCommand):
+    """Create a Restore."""
+
+    resource = _VNFRESTORE
+
+    def add_known_arguments(self, parser):
+        parser.add_argument(
+            'name', metavar='NAME',
+            help='Set a name for the Backup')
+        parser.add_argument(
+            '--action',
+            help='Set a actionfor the VNF')
+        parser.add_argument(
+            '--nova-instance-id',
+            help='Set a nova instacne id for the VNF')
+        # name + backup-name
+        parser.add_argument(
+            '--container',
+            help='Set a name for backup container in swift')
+        parser.add_argument(
+            '--storage',
+            help='Set a name for repository')
+        parser.add_argument(
+            '--neutron-network-id',
+            help='Set a network-network-id for Backup')
 
 
     def args2body(self, parsed_args):
@@ -59,33 +100,8 @@ class CreateBackup(tackerV10.CreateCommand):
 
 
         tackerV10.update_dict(parsed_args, body[self.resource],
-                              ['id', 'name', 'tenant_id','action','nova_instance_id',
-                               'container', 'storage','start_time','end_time','interval'])
+                              ['id', 'name', 'tenant_id','action','container',
+                               'storage','nova_instance_id','neutron_network_id','job_id'])
 
         return body
-
-
-
-
-
-
-#
-# class ListCluster(tackerV10.ListCommand):
-#     """List Clusters that belong to a given tenant."""
-#
-#     resource = _VNFCLUSTER
-#     list_columns = ['id', 'name', 'status']
-#
-#
-# class ShowCluster(tackerV10.ShowCommand):
-#     """Show information of a given Cluster."""
-#
-#     resource = _VNFCLUSTER
-#
-#
-# class DeleteCluster(tackerV10.DeleteCommand):
-#     """Delete a given Cluster."""
-#
-#     resource = _VNFCLUSTER
-
 

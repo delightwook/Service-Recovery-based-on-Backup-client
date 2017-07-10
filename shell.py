@@ -171,8 +171,9 @@ COMMAND_V1 = {
     'ns-show': ns.ShowNS,
 
      ### vnf Backup Restore create command
-    'vnf-backup create': vnfrecovery.CreateBackup
+    'vnf-backup create': vnfrecovery.CreateBackup,
 #   'vnf-backup list': vnfdisaster.ListBackup
+    'vnf-restore create' : vnfrecovery.CreateRestore
 
 }
 COMMANDS = {'1.0': COMMAND_V1}
