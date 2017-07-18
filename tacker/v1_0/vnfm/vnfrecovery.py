@@ -91,6 +91,9 @@ class CreateRestore(tackerV10.CreateCommand):
         parser.add_argument(
             '--neutron-network-id',
             help='Set a network-network-id for Backup')
+        parser.add_argument(
+            '--tacker-instance-id',
+            help='Set a tacker-instance-id for Backup')
 
 
     def args2body(self, parsed_args):
@@ -101,7 +104,6 @@ class CreateRestore(tackerV10.CreateCommand):
 
         tackerV10.update_dict(parsed_args, body[self.resource],
                               ['id', 'name', 'tenant_id','action','container',
-                               'storage','nova_instance_id','neutron_network_id','job_id'])
-
+                               'storage','nova_instance_id','neutron_network_id','job_id','tacker_instance_id'])
         return body
 
